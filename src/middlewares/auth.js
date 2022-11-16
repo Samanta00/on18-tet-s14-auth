@@ -8,7 +8,7 @@ const SECRET = process.env.SECRET;
 // (next) Chama o proximo middleware na fila OUUUUU NESSE CASO chame o controllerrrrr
 
 // quero checar a autorizacao do usuario
-exports.checkAuth = (req, res, next) => {
+exports.checkAuth = (req,res,next) => {
     
     const authHeader = req.get('authorization');
     if (!authHeader) {
