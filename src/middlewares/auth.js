@@ -13,7 +13,7 @@ exports.checkAuth = (req,res,next) => {
     const authHeader = req.get('authorization');
     if (!authHeader) {
         return res.status(401).send({
-            message: 'Sem autorizacao amore',
+            message: 'Sem autorizacao',
             statusCode: 401
         });
     }
@@ -23,7 +23,7 @@ exports.checkAuth = (req,res,next) => {
     
     if (!token) {
         return res.status(401).send({
-            message: "erro no token ok?"
+            message: "erro no token"
         })
     }
     
@@ -31,7 +31,7 @@ exports.checkAuth = (req,res,next) => {
         jwt.verify(token, SECRET, (err) => {
             if(err) {
                 return res.status(401).send({
-                    message: "Nao autorizada, mami"
+                    message: "Nao autorizada"
                 })    
             }
             next();

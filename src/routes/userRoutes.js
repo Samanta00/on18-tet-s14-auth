@@ -12,4 +12,3 @@ router.post("/create", controller.createUser);
 router.post("/login", authController.login);
 
 module.exports = router;
-//testelalala

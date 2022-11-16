@@ -30,6 +30,7 @@ const login = (req, res) => {
             }
             
             // jwt.sign(nome do usuário, SEGREDO)
+            //será como uma identificação para cara usuário poder logar em um cadastro diferente
             const token = jwt.sign({name: user.name}, SECRET);
             console.log("O TOKEN EH ESSE AKI", token)
             
